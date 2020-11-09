@@ -54,7 +54,7 @@ VAE_dataset_name_list <- c("Connectance", "Li", "Lp", "sptot", "full_insects", "
 
 # To associate the right legend and the right variable name in the dataset with the right explanatory variable (VE)
 VE_short_name_list <-  c("S", "P", "I", "SE", "Time", "ATS", "HF", "Ptot", "Tmean", "Pvar", "Tvar", "Forest", "Taxo")
-VE_legend_list <- c("Network size  [sp.]", "Partner pool  [plant sp.] ", "Partner pool  [insect sp.]", "Standardized sampling effort  [h/inter]", "Sampling effort  [h]", "Annual time span of sampling  [days]", "Human Influence Index  [%]", "Annual total precipitation  [mm]", "Mean temperature  [?C]", "Precipitation seasonality  [CV]", "Temperature seasonality  [?C]", "Forest cover  [%]", "Taxonomic resolution  [%]")
+VE_legend_list <- c("Network size  [sp.]", "Partner pool  [plant sp.] ", "Partner pool  [insect sp.]", "Standardized sampling effort  [h/inter]", "Sampling effort  [h]", "Annual time span of sampling  [days]", "Human Influence Index  [%]", "Annual total precipitation  [mm]", "Mean temperature  [°C]", "Precipitation seasonality  [CV]", "Temperature seasonality  [°C]", "Forest cover  [%]", "Taxonomic resolution  [%]")
 VE_axis_name_list <- c("sptot", "full_plants", "full_insects", "Sampling_effort", "Sampling_time", "Annual_time_span", "HF", "Tot_Rainfall_IPCC", "Mean_T_IPCC", "Rainfall_Seasonality_IPCC", "T_Seasonality_IPCC", "Forest", "taxo_full_sp_perc")
 
 
@@ -76,7 +76,7 @@ panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "C") & (all_multiple_
 index_plot_to_plot <- c(panel_A, panel_B)
 
 # Define panel letters
-panel_letters <- c("A", "B")
+panel_letters <- c("(a)", "(b)")
 
 # Open plot
 pdf(file = paste0("./Final_figures/Figure_2.pdf"), width = 14, height = 6)
@@ -165,7 +165,7 @@ for (j in index_plot_to_plot) {
     # Chose colors to associate with each model/web coverage
     col_list <- c("black", "dodgerblue3", "red") 
     
-    # Extract significativit? of the slope from p-value of the single models stored in all_single_plots_summary_all_VE
+    # Extract significativity of the slope from p-value of the single models stored in all_single_plots_summary_all_VE
     web_coverage_index <- NA
     for (i in 1:length(web_coverage_to_plot)) {
       web_coverage_index[i] <- which(web_coverage_to_plot[i] == web_coverage_list) # Retrieve index of plotted web coverages among all possible web coverages
@@ -374,7 +374,7 @@ VAE_dataset_name_list <- c("Connectance", "Li", "Lp", "sptot", "full_insects", "
 
 # To associate the right legend and the right variable name in the dataset with the right explanatory variable (VE)
 VE_short_name_list <-  c("S", "P", "I", "SE", "Time", "ATS", "HF", "Ptot", "Tmean", "Pvar", "Tvar", "Forest", "Taxo")
-VE_legend_list <- c("Network size  [sp.]", "Partner pool  [plant sp.] ", "Partner pool  [insect sp.]", "Standardized sampling effort  [h/inter]", "Sampling effort  [h]", "Annual time span of sampling  [days]", "Human Influence Index  [%]", "Annual total precipitation  [mm]", "Mean temperature  [?C]", "Precipitation seasonality  [CV]", "Temperature seasonality  [?C]", "Forest cover  [%]", "Taxonomic resolution  [%]")
+VE_legend_list <- c("Network size  [sp.]", "Partner pool  [plant sp.] ", "Partner pool  [insect sp.]", "Standardized sampling effort  [h/inter]", "Sampling effort  [h]", "Annual time span of sampling  [days]", "Human Influence Index  [%]", "Annual total precipitation  [mm]", "Mean temperature  [°C]", "Precipitation seasonality  [CV]", "Temperature seasonality  [°C]", "Forest cover  [%]", "Taxonomic resolution  [%]")
 VE_axis_name_list <- c("sptot", "full_plants", "full_insects", "Sampling_effort", "Sampling_time", "Annual_time_span", "HF", "Tot_Rainfall_IPCC", "Mean_T_IPCC", "Rainfall_Seasonality_IPCC", "T_Seasonality_IPCC", "Forest", "taxo_full_sp_perc")
 
 
@@ -394,7 +394,7 @@ panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "C") & (all_multiple_
 index_plot_to_plot <- c(panel_A, panel_B)
 
 # Define panel letters
-panel_letters <- c("A", "B")
+panel_letters <- c("(a)", "(b)")
 
 # Open plot
 pdf(file = paste0("./Final_figures/Figure_3.pdf"), width = 14, height = 6)
@@ -684,7 +684,7 @@ VAE_dataset_name_list <- c("Connectance", "Li", "Lp", "sptot", "full_insects", "
 
 # To associate the right legend and the right variable name in the dataset with the right explanatory variable (VE)
 VE_short_name_list <-  c("S", "P", "I", "SE", "Time", "ATS", "HF", "Ptot", "Tmean", "Pvar", "Tvar", "Forest", "Taxo")
-VE_legend_list <- c("Network size  [sp.]", "Partner pool  [plant sp.] ", "Partner pool  [insect sp.]", "Standardized sampling effort  [h/inter]", "Sampling effort  [h]", "Annual time span of sampling  [days]", "Human Influence Index  [%]", "Annual total precipitation  [mm]", "Mean temperature  [?C]", "Precipitation seasonality  [CV]", "Temperature seasonality  [?C]", "Forest cover  [%]", "Taxonomic resolution  [%]")
+VE_legend_list <- c("Network size  [sp.]", "Partner pool  [plant sp.] ", "Partner pool  [insect sp.]", "Standardized sampling effort  [h/inter]", "Sampling effort  [h]", "Annual time span of sampling  [days]", "Human Influence Index  [%]", "Annual total precipitation  [mm]", "Mean temperature  [°C]", "Precipitation seasonality  [CV]", "Temperature seasonality  [°C]", "Forest cover  [%]", "Taxonomic resolution  [%]")
 VE_axis_name_list <- c("sptot", "full_plants", "full_insects", "Sampling_effort", "Sampling_time", "Annual_time_span", "HF", "Tot_Rainfall_IPCC", "Mean_T_IPCC", "Rainfall_Seasonality_IPCC", "T_Seasonality_IPCC", "Forest", "taxo_full_sp_perc")
 
 
@@ -711,7 +711,7 @@ panel_D <- which((all_multiple_plots_summary_all_VE$VAE == "C") & (all_multiple_
 index_plot_to_plot <- c(panel_A, panel_B, panel_C, panel_D)
 
 # Define panel letters
-panel_letters <- c("A", "B", "C", "D")
+panel_letters <- c("(a)", "(b)", "(c)", "(d)")
 
 # Open plot
 pdf(file = paste0("./Final_figures/Figure_4.pdf"), width = 14, height = 12)
@@ -1023,7 +1023,7 @@ VAE_dataset_name_list <- c("Connectance", "Li", "Lp", "sptot", "full_insects", "
 
 # To associate the right legend and the right variable name in the dataset with the right explanatory variable (VE)
 VE_short_name_list <-  c("S", "P", "I", "SE", "Time", "ATS", "HF", "Ptot", "Tmean", "Pvar", "Tvar", "Forest", "Taxo")
-VE_legend_list <- c("Network size  [sp.]", "Partner pool  [plant sp.] ", "Partner pool  [insect sp.]", "Standardized sampling effort  [h/inter]", "Sampling effort  [h]", "Annual time span of sampling  [days]", "Human Influence Index  [%]", "Annual total precipitation  [mm]", "Mean temperature  [?C]", "Precipitation seasonality  [CV]", "Temperature seasonality  [?C]", "Forest cover  [%]", "Taxonomic resolution  [%]")
+VE_legend_list <- c("Network size  [sp.]", "Partner pool  [plant sp.] ", "Partner pool  [insect sp.]", "Standardized sampling effort  [h/inter]", "Sampling effort  [h]", "Annual time span of sampling  [days]", "Human Influence Index  [%]", "Annual total precipitation  [mm]", "Mean temperature  [°C]", "Precipitation seasonality  [CV]", "Temperature seasonality  [°C]", "Forest cover  [%]", "Taxonomic resolution  [%]")
 VE_axis_name_list <- c("sptot", "full_plants", "full_insects", "Sampling_effort", "Sampling_time", "Annual_time_span", "HF", "Tot_Rainfall_IPCC", "Mean_T_IPCC", "Rainfall_Seasonality_IPCC", "T_Seasonality_IPCC", "Forest", "taxo_full_sp_perc")
 
 

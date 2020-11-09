@@ -251,7 +251,7 @@ dimnames(Infos_all_models_sampling_VE_renamed)$VE <- VE_short_name_list
 load(file = "./Data/Infos_all_models_sampling.RData")
 
 VAE_list <- c("C", "Li", "Lp", "S", "I", "P" )
-VAE_full_name_list <- c("Connectance", "Insect generality", "Plant generality", "Species richness", "Insect richness", "Plant richness")
+VAE_full_name_list <- c("Connectance", "Insect link density", "Plant link density", "Species richness", "Insect richness", "Plant richness")
 web_coverage_list <- c("full")
 
 # Convert VE name to proper short names for plots
@@ -386,7 +386,7 @@ library("grid")
 load(file = "./Data/Infos_all_models_sampling.RData")
 
 VAE_list <- c("C", "Li", "Lp", "S", "I", "P" )
-VAE_full_name_list <- c("Connectance", "Insect generality", "Plant generality", "Species richness", "Insect richness", "Plant richness")
+VAE_full_name_list <- c("Connectance", "Insect link density", "Plant link density", "Species richness", "Insect richness", "Plant richness")
 web_coverage_list <- c("full")
 
 # Convert VE name to proper short names for plots
@@ -466,7 +466,7 @@ for (VAE in VAE) {
     show.legend = T) 
   
   # Gestion de l'esth?tique
-  g <- g + theme_bw() + ggtitle("A/ Species richness") +  
+  g <- g + theme_bw() + ggtitle("(a) Species richness") +  
     ylab(expression(paste(beta, "-coefficients"))) + 
     # xlab("Explanatory variables") +
     theme(plot.title = element_text(hjust = 0, vjust = 0.5, size = 13, face = "bold"),  # Titre
@@ -497,7 +497,7 @@ for (VAE in VAE) {
     geom_hline(yintercept = 0, linetype = "dashed", color = "black") 
   
   # # Create fixed text
-  # grob <- grobTree(textGrob("D/ Species richness", x=0.03,  y=0.95, hjust=0,
+  # grob <- grobTree(textGrob("(d) Species richness", x=0.03,  y=0.95, hjust=0,
   #                           gp=gpar(fontsize=13, fontface="bold")))
   # # Add to graph
   # g <- g + annotation_custom(grob)
@@ -584,7 +584,7 @@ for (VAE in VAE) {
     show.legend = T) 
   
   # Gestion de l'esth?tique
-  g <- g + theme_bw() + ggtitle("B/ Insect richness") +  
+  g <- g + theme_bw() + ggtitle("(b) Insect richness") +  
     ylab(expression(paste(beta, "-coefficients"))) + 
     # xlab("Explanatory variables") +
     theme(plot.title = element_text(hjust = 0, vjust = 0.5, size = 13, face = "bold"),  # Titre
@@ -616,7 +616,7 @@ for (VAE in VAE) {
     geom_hline(yintercept = 0, linetype = "dashed", color = "black") 
   
   # # Create fixed text
-  # grob <- grobTree(textGrob("E/ Insect richness", x=0.03,  y=0.95, hjust=0,
+  # grob <- grobTree(textGrob("(e) Insect richness", x=0.03,  y=0.95, hjust=0,
   #                           gp=gpar(fontsize=13, fontface="bold")))
   # # Add to graph
   # g <- g + annotation_custom(grob)
@@ -704,7 +704,7 @@ for (VAE in VAE) {
     show.legend = T) 
   
   # Gestion de l'esth?tique
-  g <- g + theme_bw() + ggtitle("C/ Plant richness") +  
+  g <- g + theme_bw() + ggtitle("(c) Plant richness") +  
     ylab(expression(paste(beta, "-coefficients"))) + 
     # xlab("Explanatory variables") +
     theme(plot.title = element_text(hjust = 0, vjust = 0.5, size = 13, face = "bold"),  # Titre
@@ -736,7 +736,7 @@ for (VAE in VAE) {
     geom_hline(yintercept = 0, linetype = "dashed", color = "black") 
   
   # # Create fixed text
-  # grob <- grobTree(textGrob("F/ Plant richness", x=0.03,  y=0.95, hjust=0,
+  # grob <- grobTree(textGrob("(f) Plant richness", x=0.03,  y=0.95, hjust=0,
   #                           gp=gpar(fontsize=13, fontface="bold")))
   # # Add to graph
   # g <- g + annotation_custom(grob)
@@ -824,7 +824,7 @@ for (VAE in VAE) {
     show.legend = T) 
   
   # Gestion de l'esth?tique
-  g <- g + theme_bw() + ggtitle("D/ Connectance") +  
+  g <- g + theme_bw() + ggtitle("(d) Connectance") +  
     ylab(expression(paste(beta, "-coefficients"))) + 
     xlab("Explanatory variables") +
     theme(plot.title = element_text(hjust = 0, vjust = 0.5, size = 13, face = "bold"),  # Titre
@@ -855,7 +855,7 @@ for (VAE in VAE) {
     geom_hline(yintercept = 0, linetype = "dashed", color = "black") 
   
   # # Create fixed text
-  # grob <- grobTree(textGrob("A/ Connectance", x=0.03,  y=0.95, hjust=0,
+  # grob <- grobTree(textGrob("(a) Connectance", x=0.03,  y=0.95, hjust=0,
   #                           gp=gpar(fontsize=13, fontface="bold")))
   # # Add to graph
   # g <- g + annotation_custom(grob)
@@ -942,7 +942,7 @@ for (VAE in VAE) {
     show.legend = T) 
   
   # Gestion de l'esth?tique
-  g <- g + theme_bw() + ggtitle("E/ Insect generality") +  
+  g <- g + theme_bw() + ggtitle("(e) Insect link density") +  
     ylab(expression(paste(beta, "-coefficients"))) + 
     xlab("Explanatory variables") +
     theme(plot.title = element_text(hjust = 0, vjust = 0.5, size = 13, face = "bold"),  # Titre
@@ -973,7 +973,7 @@ for (VAE in VAE) {
     geom_hline(yintercept = 0, linetype = "dashed", color = "black") 
   
   # # Create fixed text
-  # grob <- grobTree(textGrob("B/ Insect generality", x=0.03,  y=0.95, hjust=0,
+  # grob <- grobTree(textGrob("(b) Insect link density", x=0.03,  y=0.95, hjust=0,
   #                           gp=gpar(fontsize=13, fontface="bold")))
   # # Add to graph
   # g <- g + annotation_custom(grob)
@@ -1061,7 +1061,7 @@ for (VAE in VAE) {
     show.legend = T) 
   
   # Gestion de l'esth?tique
-  g <- g + theme_bw() + ggtitle("F/ Plant generality") +  
+  g <- g + theme_bw() + ggtitle("(f) Plant link density") +  
     ylab(expression(paste(beta, "-coefficients"))) + 
     xlab("Explanatory variables") +
     theme(plot.title = element_text(hjust = 0, vjust = 0.5, size = 13, face = "bold"),  # Titre
@@ -1092,7 +1092,7 @@ for (VAE in VAE) {
     geom_hline(yintercept = 0, linetype = "dashed", color = "black") 
   
   # # Create fixed text
-  # grob <- grobTree(textGrob("C/ Plant generality", x=0.03,  y=0.95, hjust=0,
+  # grob <- grobTree(textGrob("(c) Plant link density", x=0.03,  y=0.95, hjust=0,
   #                           gp=gpar(fontsize=13, fontface="bold")))
   # # Add to graph
   # g <- g + annotation_custom(grob)

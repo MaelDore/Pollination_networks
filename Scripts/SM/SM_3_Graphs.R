@@ -11,12 +11,12 @@
 
 # Outputs:
 
-# Figure S3.1.1: Effects of anthropogenic pressures on insect richness (A) and insect generality (B)
-# Figure S3.1.2: Effects of anthropogenic pressures on plant richness (A) and plant generality (B)
-# Figure S3.2.1: Effects of climate on insect richness (A) and insect generality (B)
-# Figure S3.2.2: Effects of climate on plant richness (A) and plant generality (B)
-# Figure S3.3.1: Effects of sampling characteristics on insect richness (A & C) and insect generality (B & D)
-# Figure S3.3.2: Effects of sampling characteristics on plant richness (A & C) and plant generality (B & D)
+# Figure S3.1.1: Effects of anthropogenic pressures on insect richness (A) and insect link density (B)
+# Figure S3.1.2: Effects of anthropogenic pressures on plant richness (A) and plant link density (B)
+# Figure S3.2.1: Effects of climate on insect richness (A) and insect link density (B)
+# Figure S3.2.2: Effects of climate on plant richness (A) and plant link density (B)
+# Figure S3.3.1: Effects of sampling characteristics on insect richness (A & C) and insect link density (B & D)
+# Figure S3.3.2: Effects of sampling characteristics on plant richness (A & C) and plant link density (B & D)
 
 #####
 
@@ -27,10 +27,10 @@ rm(list = ls())
 gc() # Force R to release memory it is no longer using
 
 
-##### Figure S3.1.1: Effects of anthropogenic pressures on insect richness (A) and insect generality (B) #####
+##### Figure S3.1.1: Effects of anthropogenic pressures on insect richness (A) and insect link density (B) #####
 
 # A/ Effect of human influence on insect richness
-# B/ Effect of human influence on insect generality
+# B/ Effect of human influence on insect link density
 
 
 # Cut panels for figure
@@ -49,7 +49,7 @@ load(file = "./Data/all_multiple_plots_summary_all_VE.RData")
 
 # To associate the right legend and the right variable name in the dataset with the right response variable (VAE)
 VAE_list <- c("C", "Li", "Lp", "S", "I", "P" )
-VAE_legend_list <- c("Connectance", "Insect Generality  [inter/sp.]", "Plant Generality  [inter/sp.]", "Total Richness  [sp.]", "Insect Richness  [sp.]", "Plant Richness  [sp.]")
+VAE_legend_list <- c("Connectance", "Insect link density  [inter/sp.]", "Plant link density  [inter/sp.]", "Total richness  [sp.]", "Insect richness  [sp.]", "Plant richness  [sp.]")
 VAE_dataset_name_list <- c("Connectance", "Li", "Lp", "sptot", "full_insects", "full_plants" )
 
 
@@ -68,7 +68,7 @@ web_coverage_legend_custom <- paste0(web_coverage_legend,":") # Add the double p
 # Chose panel A: effect of Human Influence on Insect richness
 panel_A <- which((all_multiple_plots_summary_all_VE$VAE == "I") & (all_multiple_plots_summary_all_VE$VE_short_name == "HF"))
 
-# Chose panel B: effect of Insect generality
+# Chose panel B: effect of Insect link density
 panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "Li") & (all_multiple_plots_summary_all_VE$VE_short_name == "HF"))
 
 
@@ -76,7 +76,7 @@ panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "Li") & (all_multiple
 index_plot_to_plot <- c(panel_A, panel_B)
 
 # Define panel letters
-panel_letters <- c("A", "B")
+panel_letters <- c("(a)", "(b)")
 
 # Open plot
 pdf(file = paste0("./SM_Final_figures/Figure_S3.1.1.pdf"), width = 14, height = 6)
@@ -340,10 +340,10 @@ par(oma = oma_old_settings)
 
 
 
-##### Figure S3.1.2: Effects of anthropogenic pressures on plant richness (A) and plant generality (B) #####
+##### Figure S3.1.2: Effects of anthropogenic pressures on plant richness (A) and plant link density (B) #####
 
 # A/ Effect of human influence on plant richness
-# B/ Effect of human influence on plant generality
+# B/ Effect of human influence on plant link density
 
 # Cut panels for figure
 decoupe <- layout(mat = matrix(data = c(1,0,2), nrow = 1, ncol = 3, byrow = TRUE), # Numbers = order of plots ;
@@ -361,7 +361,7 @@ load(file = "./Data/all_multiple_plots_summary_all_VE.RData")
 
 # To associate the right legend and the right variable name in the dataset with the right response variable (VAE)
 VAE_list <- c("C", "Li", "Lp", "S", "I", "P" )
-VAE_legend_list <- c("Connectance", "Insect Generality  [inter/sp.]", "Plant Generality  [inter/sp.]", "Total Richness  [sp.]", "Insect Richness  [sp.]", "Plant Richness  [sp.]")
+VAE_legend_list <- c("Connectance", "Insect link density  [inter/sp.]", "Plant link density  [inter/sp.]", "Total richness  [sp.]", "Insect richness  [sp.]", "Plant richness  [sp.]")
 VAE_dataset_name_list <- c("Connectance", "Li", "Lp", "sptot", "full_insects", "full_plants" )
 
 
@@ -380,7 +380,7 @@ web_coverage_legend_custom <- paste0(web_coverage_legend,":") # Add the double p
 # Chose panel A: effect of Human Influence on Plant richness
 panel_A <- which((all_multiple_plots_summary_all_VE$VAE == "P") & (all_multiple_plots_summary_all_VE$VE_short_name == "HF"))
 
-# Chose panel B: effect of Plant generality
+# Chose panel B: effect of Plant link density
 panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "Lp") & (all_multiple_plots_summary_all_VE$VE_short_name == "HF"))
 
 
@@ -388,7 +388,7 @@ panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "Lp") & (all_multiple
 index_plot_to_plot <- c(panel_A, panel_B)
 
 # Define panel letters
-panel_letters <- c("A", "B")
+panel_letters <- c("(a)", "(b)")
 
 # Open plot
 pdf(file = paste0("./SM_Final_figures/Figure_S3.1.2.pdf"), width = 14, height = 6)
@@ -651,10 +651,10 @@ par(oma = oma_old_settings)
 
 
 
-##### Figure S3.2.1: Effects of climate on insect richness (A) and insect generality (B) #####
+##### Figure S3.2.1: Effects of climate on insect richness (A) and insect link density (B) #####
 
 # A/ Effect of mean temperature on insect richness
-# B/ Effect of mean temperature on insect generality
+# B/ Effect of mean temperature on insect link density
 
 
 ### Clear memory
@@ -677,7 +677,7 @@ load(file = "./Data/all_multiple_plots_summary_all_VE.RData")
 
 # To associate the right legend and the right variable name in the dataset with the right response variable (VAE)
 VAE_list <- c("C", "Li", "Lp", "S", "I", "P" )
-VAE_legend_list <- c("Connectance", "Insect Generality  [inter/sp.]", "Plant Generality  [inter/sp.]", "Total Richness  [sp.]", "Insect Richness  [sp.]", "Plant Richness  [sp.]")
+VAE_legend_list <- c("Connectance", "Insect link density  [inter/sp.]", "Plant link density  [inter/sp.]", "Total richness  [sp.]", "Insect richness  [sp.]", "Plant richness  [sp.]")
 VAE_dataset_name_list <- c("Connectance", "Li", "Lp", "sptot", "full_insects", "full_plants" )
 
 
@@ -696,7 +696,7 @@ web_coverage_legend_custom <- paste0(web_coverage_legend,":") # Add the double p
 # Chose panel A: Effect of mean temperature on Insect richness 
 panel_A <- which((all_multiple_plots_summary_all_VE$VAE == "I") & (all_multiple_plots_summary_all_VE$VE_short_name == "Tmean"))
 
-# Chose panel B: Effect of mean temperature on Insect Generality
+# Chose panel B: Effect of mean temperature on Insect link density
 panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "Li") & (all_multiple_plots_summary_all_VE$VE_short_name == "Tmean"))
 
 
@@ -704,7 +704,7 @@ panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "Li") & (all_multiple
 index_plot_to_plot <- c(panel_A, panel_B)
 
 # Define panel letters
-panel_letters <- c("A", "B")
+panel_letters <- c("(a)", "(b)")
 
 # Open plot
 pdf(file = paste0("./SM_Final_figures/Figure_S3.2.1.pdf"), width = 14, height = 6)
@@ -959,10 +959,10 @@ par(oma = oma_old_settings)
 
 
 
-##### Figure S3.2.2: Effects of climate on plant richness (A) and plant generality (B) #####
+##### Figure S3.2.2: Effects of climate on plant richness (A) and plant link density (B) #####
 
 # A/ Effect of mean temperature on plant richness
-# B/ Effect of mean temperature on plant generality
+# B/ Effect of mean temperature on plant link density
 
 
 ### Clear memory
@@ -985,7 +985,7 @@ load(file = "./Data/all_multiple_plots_summary_all_VE.RData")
 
 # To associate the right legend and the right variable name in the dataset with the right response variable (VAE)
 VAE_list <- c("C", "Li", "Lp", "S", "I", "P" )
-VAE_legend_list <- c("Connectance", "Insect Generality  [inter/sp.]", "Plant Generality  [inter/sp.]", "Total Richness  [sp.]", "Insect Richness  [sp.]", "Plant Richness  [sp.]")
+VAE_legend_list <- c("Connectance", "Insect link density  [inter/sp.]", "Plant link density  [inter/sp.]", "Total richness  [sp.]", "Insect richness  [sp.]", "Plant richness  [sp.]")
 VAE_dataset_name_list <- c("Connectance", "Li", "Lp", "sptot", "full_insects", "full_plants" )
 
 
@@ -1004,7 +1004,7 @@ web_coverage_legend_custom <- paste0(web_coverage_legend,":") # Add the double p
 # Chose panel A: Effect of mean temperature on Plant richness 
 panel_A <- which((all_multiple_plots_summary_all_VE$VAE == "P") & (all_multiple_plots_summary_all_VE$VE_short_name == "Tmean"))
 
-# Chose panel B: Effect of mean temperature on Plant Generality
+# Chose panel B: Effect of mean temperature on Plant link density
 panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "Lp") & (all_multiple_plots_summary_all_VE$VE_short_name == "Tmean"))
 
 
@@ -1012,7 +1012,7 @@ panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "Lp") & (all_multiple
 index_plot_to_plot <- c(panel_A, panel_B)
 
 # Define panel letters
-panel_letters <- c("A", "B")
+panel_letters <- c("(a)", "(b)")
 
 # Open plot
 pdf(file = paste0("./SM_Final_figures/Figure_S3.2.2.pdf"), width = 14, height = 6)
@@ -1267,12 +1267,12 @@ par(oma = oma_old_settings)
 
 
 
-##### Figure S3.3.1: Effects of sampling characteristics on insect richness (A & C) and insect generality (B & D) #####
+##### Figure S3.3.1: Effects of sampling characteristics on insect richness (A & C) and insect link density (B & D) #####
 
 # A/ Effect of sampling effort on insect richness
-# B/ Effect of standardized sampling effort on insect generality
+# B/ Effect of standardized sampling effort on insect link density
 # C/ Effect of taxonomic resolution on insect richness
-# D/ Effect of annual time span of sampling on insect generality
+# D/ Effect of annual time span of sampling on insect link density
 
 
 ### Clear memory
@@ -1295,7 +1295,7 @@ load(file = "./Data/all_multiple_plots_summary_all_VE.RData")
 
 # To associate the right legend and the right variable name in the dataset with the right response variable (VAE)
 VAE_list <- c("C", "Li", "Lp", "S", "I", "P" )
-VAE_legend_list <- c("Connectance", "Insect Generality  [inter/sp.]", "Plant Generality  [inter/sp.]", "Total Richness  [sp.]", "Insect Richness  [sp.]", "Plant Richness  [sp.]")
+VAE_legend_list <- c("Connectance", "Insect link density  [inter/sp.]", "Plant link density  [inter/sp.]", "Total richness  [sp.]", "Insect richness  [sp.]", "Plant richness  [sp.]")
 VAE_dataset_name_list <- c("Connectance", "Li", "Lp", "sptot", "full_insects", "full_plants" )
 
 
@@ -1314,13 +1314,13 @@ web_coverage_legend_custom <- paste0(web_coverage_legend,":") # Add the double p
 # Chose panel A: Effect of sampling effort on insect richness
 panel_A <- which((all_multiple_plots_summary_all_VE$VAE == "I") & (all_multiple_plots_summary_all_VE$VE_short_name == "Time"))
 
-# Chose panel B: Effect of standardized sampling effort on insect generality
+# Chose panel B: Effect of standardized sampling effort on insect link density
 panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "Li") & (all_multiple_plots_summary_all_VE$VE_short_name == "SE"))
 
 # Chose panel C: Effect of taxonomic resolution on insect richness
 panel_C <- which((all_multiple_plots_summary_all_VE$VAE == "I") & (all_multiple_plots_summary_all_VE$VE_short_name == "Taxo"))
 
-# Chose panel D: Effect of annual time span of sampling on insect generality
+# Chose panel D: Effect of annual time span of sampling on insect link density
 panel_D <- which((all_multiple_plots_summary_all_VE$VAE == "Li") & (all_multiple_plots_summary_all_VE$VE_short_name == "ATS"))
 
 
@@ -1328,7 +1328,7 @@ panel_D <- which((all_multiple_plots_summary_all_VE$VAE == "Li") & (all_multiple
 index_plot_to_plot <- c(panel_A, panel_B, panel_C, panel_D)
 
 # Define panel letters
-panel_letters <- c("A", "B", "C", "D")
+panel_letters <- c("(a)","(b)","(c)","(d)")
 
 # Open plot
 pdf(file = paste0("./SM_Final_figures/Figure_S3.3.1.pdf"), width = 14, height = 12)
@@ -1614,12 +1614,12 @@ par(oma = oma_old_settings)
 
 
 
-##### Figure S3.3.2: Effects of sampling characteristics on plant richness (A & C) and plant generality (B & D) #####
+##### Figure S3.3.2: Effects of sampling characteristics on plant richness (A & C) and plant link density (B & D) #####
 
 # A/ Effect of sampling effort on plant richness
-# B/ Effect of standardized sampling effort on plant generality
+# B/ Effect of standardized sampling effort on plant link density
 # C/ Effect of taxonomic resolution on plant richness
-# D/ Effect of annual time span of sampling on plant generality
+# D/ Effect of annual time span of sampling on plant link density
 
 
 ### Clear memory
@@ -1642,7 +1642,7 @@ load(file = "./Data/all_multiple_plots_summary_all_VE.RData")
 
 # To associate the right legend and the right variable name in the dataset with the right response variable (VAE)
 VAE_list <- c("C", "Li", "Lp", "S", "I", "P" )
-VAE_legend_list <- c("Connectance", "Insect Generality  [inter/sp.]", "Plant Generality  [inter/sp.]", "Total Richness  [sp.]", "Insect Richness  [sp.]", "Plant Richness  [sp.]")
+VAE_legend_list <- c("Connectance", "Insect link density  [inter/sp.]", "Plant link density  [inter/sp.]", "Total richness  [sp.]", "Insect richness  [sp.]", "Plant richness  [sp.]")
 VAE_dataset_name_list <- c("Connectance", "Li", "Lp", "sptot", "full_insects", "full_plants" )
 
 
@@ -1661,13 +1661,13 @@ web_coverage_legend_custom <- paste0(web_coverage_legend,":") # Add the double p
 # Chose panel A: Effect of sampling effort on plant richness
 panel_A <- which((all_multiple_plots_summary_all_VE$VAE == "P") & (all_multiple_plots_summary_all_VE$VE_short_name == "Time"))
 
-# Chose panel B: Effect of standardized sampling effort on plant generality
+# Chose panel B: Effect of standardized sampling effort on plant link density
 panel_B <- which((all_multiple_plots_summary_all_VE$VAE == "Lp") & (all_multiple_plots_summary_all_VE$VE_short_name == "SE"))
 
 # Chose panel C: Effect of taxonomic resolution on plant richness
 panel_C <- which((all_multiple_plots_summary_all_VE$VAE == "P") & (all_multiple_plots_summary_all_VE$VE_short_name == "Taxo"))
 
-# Chose panel D: Effect of annual time span of sampling on plant generality
+# Chose panel D: Effect of annual time span of sampling on plant link density
 panel_D <- which((all_multiple_plots_summary_all_VE$VAE == "Lp") & (all_multiple_plots_summary_all_VE$VE_short_name == "ATS"))
 
 
@@ -1675,7 +1675,7 @@ panel_D <- which((all_multiple_plots_summary_all_VE$VAE == "Lp") & (all_multiple
 index_plot_to_plot <- c(panel_A, panel_B, panel_C, panel_D)
 
 # Define panel letters
-panel_letters <- c("A", "B", "C", "D")
+panel_letters <- c("(a)", "(b)","(c)","(d)")
 
 # Open plot
 pdf(file = paste0("./SM_Final_figures/Figure_S3.3.2.pdf"), width = 14, height = 12)
