@@ -65,9 +65,34 @@ All content is available
   - [:file\_folder: **Tables**](Tables/) directory contains the tables
     displayed in the main text.
 
+**Note:** The raw interaction network data are available at [Link to be
+posted]()
+
+## How to run it
+
+This research has been developed using the statistical programming
+language R. To run the analyses, you will need installed on your
+computer the [R software](https://cloud.r-project.org/) itself and
+optionally [RStudio
+Desktop](https://rstudio.com/products/rstudio/download/).
+
+You can download the entire project as a `.zip` from [this
+URL](/archive/master.zip). After unzipping:
+
+  - Open the `Pollination_networks.Rproj` file, found at the root of the
+    project, in RStudio
+
+  - Run sequentially the scripts found in the [:file\_folder:
+    **Scripts**](Scripts/) folder. It will rebuild the model outputs and
+    figures presented in the main text of the article.
+
+  - Run sequentially the scripts found in the [:file\_folder:
+    **Scripts/SM**](Scripts/SM/) sub-folder. It will rebuild the model
+    outputs and figures presented in the Supplementaries of the article.
+
 ## How to cite
 
-Please cite this reasearch article as:
+Please cite this research article as:
 
 > Doré et al., 2020 - Relative effects of anthropogenic pressures,
 > climate, and sampling design on the structure of pollination networks
