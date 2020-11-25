@@ -1,4 +1,8 @@
 
+# Author: Maël DORÉ
+# Contact: mael.dore@gmail.com
+# License: MIT
+
 ##### Script SM5_2: Generate Figure S5.2 #####
 
 # Comparison of beta-coefficients obtain for full coverage, between models with and without polar networks included

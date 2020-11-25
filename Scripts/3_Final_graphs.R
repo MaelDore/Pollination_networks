@@ -1007,7 +1007,9 @@ par(oma = oma_old_settings)
 
 # E/ Effect of sampling time on species richness
 # F/ Effect of sampling effort on network connectance
-
+# Author: Maël DORÉ
+# Contact: mael.dore@gmail.com
+# License: MIT
 
 ## Load files
 

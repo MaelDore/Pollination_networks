@@ -1,4 +1,8 @@
 
+# Author: Maël DORÉ
+# Contact: mael.dore@gmail.com
+# License: MIT
+
 ##### Script SM6_2: Generate Figure S6 #####
 
 # Comparison of beta-coefficients obtain for full coverage, between models with and without sampling effects included

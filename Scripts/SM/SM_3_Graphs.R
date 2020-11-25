@@ -1,6 +1,8 @@
+# Author: Maël DORÉ
+# Contact: mael.dore@gmail.com
+# License: MIT
 
 ##### Script SM_3: Generate graphs for the SM_3 #####
-
 
 # Inputs:
 

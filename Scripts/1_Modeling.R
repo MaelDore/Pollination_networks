@@ -1,6 +1,8 @@
+# Author: MaÃ«l DORÃ‰
+# Contact: mael.dore@gmail.com
+# License: MIT
 
 ##### Script 1: Model pollination network responses to anthropogenic pressures, climate, and sampling design #####
-
 
 # Inputs:
 
@@ -164,7 +166,7 @@ for (j in 1:nrow(all_models_summary)) {
   # Check if storage folder exists. Create it. Save path
   
   if (!dir.exists(paths = paste0("./Models_outputs/",VAE,"/",web_coverage,"/",model_name))) { # Revoie T/F si le dossier existe
-    dir.create(path = paste0("./Models_outputs/",VAE,"/",web_coverage,"/",model_name), recursive = T) # Créer un (sous-)dossier. Récursive = T => pour aussi générer les dossiers parents si inexistents
+    dir.create(path = paste0("./Models_outputs/",VAE,"/",web_coverage,"/",model_name), recursive = T) # Cr?er un (sous-)dossier. R?cursive = T => pour aussi g?n?rer les dossiers parents si inexistents
   } 
   
   
@@ -178,7 +180,7 @@ for (j in 1:nrow(all_models_summary)) {
   for (i in 1:length(potMAM_AICc)) {
     tryCatch({ # Function to only display error message when no SEV corrrection is needed, instead of stopping the loop
       MEcorr <-  NA # Initialize the list of SEV to test new SEV to incorporate in the model
-      model <- potMAM_AICc[[i]] # Load model n°i in dredge
+      model <- potMAM_AICc[[i]] # Load model n?i in dredge
       resid=resid(model,type="pearson") # Extract residuals to compute Moran's I
       RandomTestMoran <- moran.mc(resid, listw=neigh.listw, nsim=9999, zero.policy=T) # Compute Moran's I of OLS model using the weighted neighbor matrix
       Moran_I[i] <- RandomTestMoran$statistic # Extract Moran's I
@@ -192,10 +194,10 @@ for (j in 1:nrow(all_models_summary)) {
       RandomTestMoran_ME <- moran.mc(residME, listw=neigh.listw, nsim=9999, zero.policy=T) # Compute Moran's I of SEVM using the weighted neighbor matrix
       Moran_I_ME[i] <- round(RandomTestMoran_ME$statistic,3) # Extract Moran's I
       Moran_pvalue_ME[i] <- round(RandomTestMoran_ME$p.value,3) # Extract associated p-value
-    }, error=function(e){cat("ERROR Model n°",i,":",conditionMessage(e), "\n")}) # Print error message if present isntead of stopping the loop
+    }, error=function(e){cat("ERROR Model n?",i,":",conditionMessage(e), "\n")}) # Print error message if present isntead of stopping the loop
     
     if (i %% 10 == 0) {
-      cat(paste(Sys.time(), "- Model n°", i, "on", length(potMAM_AICc),"\n")) # Display time and index every 10 models
+      cat(paste(Sys.time(), "- Model n?", i, "on", length(potMAM_AICc),"\n")) # Display time and index every 10 models
     }
     
   }
@@ -267,7 +269,7 @@ for (j in 1:nrow(all_models_summary)) {
     summary_table_coefs$Orig_coefs_MAM <- round(MAM.avg.coefs$coefficients[c("ln_sptot","ln_pl","ln_ins","ln_time","ln_SE","ln_ATS","Sampling_typeTO","ln_forest","taxo_full_sp_perc","ln_HF","Tot_Rainfall_IPCC","Mean_T_IPCC","Rainfall_Seasonality_IPCC","T_Seasonality_IPCC")],6) # Coefs MAM = best model not-standardized
     summary(bestmod_AICc) # F-statistic : ???,  p-value: ???
     summary_table_coefs$Orig_coefs_Bestmod <- round(coef(bestmod_AICc)[c("ln_sptot","ln_pl","ln_ins","ln_time","ln_SE","ln_ATS","Sampling_typeTO","ln_forest","taxo_full_sp_perc","ln_HF","Tot_Rainfall_IPCC","Mean_T_IPCC","Rainfall_Seasonality_IPCC","T_Seasonality_IPCC")],6) # Coefs best model not-standardized
-    MAM.avg.coefs_std <- std.coef(MAM_AICc[[1]], partial.sd = T) ; summary_MAM.avg.coefs_std <- summary(MAM.avg.coefs_std) # Beta-coefficients standardisés via partial SD. Pas besoin de moyenne car un seul MAM = Best model
+    MAM.avg.coefs_std <- std.coef(MAM_AICc[[1]], partial.sd = T) ; summary_MAM.avg.coefs_std <- summary(MAM.avg.coefs_std) # Beta-coefficients standardis?s via partial SD. Pas besoin de moyenne car un seul MAM = Best model
     summary_table_coefs$Beta_coefs_MAM <- round(MAM.avg.coefs_std[,1][c("ln_sptot","ln_pl","ln_ins","ln_time","ln_SE","ln_ATS","Sampling_typeTO","ln_forest","taxo_full_sp_perc","ln_HF","Tot_Rainfall_IPCC","Mean_T_IPCC","Rainfall_Seasonality_IPCC","T_Seasonality_IPCC")],3) # Coefs MAM = best model standardized
     Bestmod_coefs_std <- std.coef(x = bestmod_AICc, partial.sd = T) ; summary_Bestmod_coefs_std <- summary(Bestmod_coefs_std) ; summary_Bestmod_coefs_std
     summary_table_coefs$Beta_coefs_Bestmod <- round(Bestmod_coefs_std[,1][c("ln_sptot","ln_pl","ln_ins","ln_time","ln_SE","ln_ATS","Sampling_typeTO","ln_forest","taxo_full_sp_perc","ln_HF","Tot_Rainfall_IPCC","Mean_T_IPCC","Rainfall_Seasonality_IPCC","T_Seasonality_IPCC")],3) # Coefs best model standardized
@@ -275,7 +277,7 @@ for (j in 1:nrow(all_models_summary)) {
   
   # View(summary_table_coefs) 
   
-  summary_table_criteria <- data.frame(round(summary(bestmod_AICc)$adj.r.squared,3)) ; names(summary_table_criteria) <- "Rsq_adj" # R² adjusted = ???
+  summary_table_criteria <- data.frame(round(summary(bestmod_AICc)$adj.r.squared,3)) ; names(summary_table_criteria) <- "Rsq_adj" # R? adjusted = ???
   summary_table_criteria$AICc_bestmod <- round(MuMIn::AICc(bestmod_AICc),2) # AICc = ???
   summary_table_criteria$Moran_I_bestmod <- bestmod_table$Moran_I_ME ; summary_table_criteria$Moran_pvalue_bestmod <- bestmod_table$Moran_pvalue_ME # Best model Moran's I and associated p-value
   summary_table_criteria$max_Moran_I_MAM <- max(MAM_table$Moran_I_ME) ; summary_table_criteria$min_Moran_pvalue_MAM <- min(MAM_table$Moran_pvalue_ME) # Max Moran's I and Min p-value among all MAMs 
@@ -285,7 +287,7 @@ for (j in 1:nrow(all_models_summary)) {
   
   save(summary_MAM.avg.coefs_std, summary_Bestmod_coefs_std, summary_table_coefs, summary_table_criteria, file = paste0("./Models_outputs/",VAE,"/",web_coverage,"/",model_name,"/",model_name,"_summaries.RData"))
   
-  # par(mfcol=c(2,2)) ; plot(bestmod_AICc) # Best modèle ok ?
+  # par(mfcol=c(2,2)) ; plot(bestmod_AICc) # Best mod?le ok ?
   # shapiro.test(bestmod_AICc$resid) ; par(mfcol=c(1,1)) ; hist(bestmod_AICc$resid, breaks = 20) ; abline(v=0, lty=2, lwd= 3, col ="red")
   # # Check if p-value > 0.05. Not breaking normality assumption
   
@@ -332,7 +334,7 @@ model_type <- "rich"
 # polar <- "with_polar"
 polar <- "no_polar"
 
-# Chose the resposne variable (VAE)
+# Chose the response variable (VAE)
 VAE <- "C" 
 VAE <- "Li" 
 VAE <- "Lp"
@@ -350,8 +352,3 @@ summary_Bestmod_coefs_std
 View(summary_table_coefs)
 View(summary_table_criteria)
 
-# Nb of regional networks in the model
-best_model <- readRDS(file = paste0("./Models_outputs/",VAE,"/",web_coverage,"/",model_name,"/",model_name,"_bestmod_AICc.RData"))
-nrow(best_model$model)
-
-aggreg.webs <- readRDS(file = paste0("./Data/Filtered_Datasets/aggreg.webs_", model_dataset, ".RData"))

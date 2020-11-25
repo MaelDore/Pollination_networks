@@ -1,3 +1,7 @@
+# Author: Maël DORÉ
+# Contact: mael.dore@gmail.com
+# License: MIT
+
 ##### Graphical Abstract #####
 
 ### Generate base plot for Graphical abstract

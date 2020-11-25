@@ -1,4 +1,8 @@
 
+# Author: Maël DORÉ
+# Contact: mael.dore@gmail.com
+# License: MIT
+
 ##### Script SM5_1: Model pollination network responses to anthropogenic pressures, climate, and sampling design, including polar networks #####
 
 

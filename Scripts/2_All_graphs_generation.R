@@ -1,3 +1,6 @@
+# Author: MaÃ«l DORÃ‰
+# Contact: mael.dore@gmail.com
+# License: MIT
 
 ##### Script 2: Generate all possible graphs #####
 
@@ -101,7 +104,7 @@ for (i in 1:nrow(all_models_summary)) {
     j <- j + 1
     
     if (j %% 50 == 0) {
-      cat(paste("\n Plot n°", j, "on", nrow(all_single_plots_summary_all_VE), "\n"))
+      cat(paste("\n Plot n?", j, "on", nrow(all_single_plots_summary_all_VE), "\n"))
     }
   }
 }
@@ -332,11 +335,11 @@ for (j in 1:nrow(all_single_plots_summary_all_VE)) {
   all_single_plots_summary_all_VE$Last_runtime[j] <- as.character(Sys.time())
   
   if (j %% 10 == 0) {
-    cat(paste("\n Plot n°", j, "on", nrow(all_single_plots_summary_all_VE), "-", Sys.time(), "\n"))
+    cat(paste("\n Plot n?", j, "on", nrow(all_single_plots_summary_all_VE), "-", Sys.time(), "\n"))
   }
   
   # if (k %% 10 == 0) {
-  #   cat(paste("\n Plot n°", k, "on", length(index_plot_to_plot), "-", Sys.time(), "\n"))
+  #   cat(paste("\n Plot n?", k, "on", length(index_plot_to_plot), "-", Sys.time(), "\n"))
   # }
   
   k <- k + 1 # Index when running a reduced number of plots
@@ -413,7 +416,7 @@ for (j in 1:nrow(all_multiple_plots_summary_all_VE)) {
   # Chack if all web_coverage are available for this multiple plot
   if (!all(web_coverage_to_plot %in% web_coverage_available)) { # If not, warn with a message
     
-    cat(paste("Not all web coverages are available to do a Multliple plot for", all_multiple_plots_summary_all_VE$VAE[j], "~", all_multiple_plots_summary_all_VE$VE_short_name[j] , "in model", all_multiple_plots_summary_all_VE$model_type[j], all_multiple_plots_summary_all_VE$polar[j], all_multiple_plots_summary_all_VE$taxo[j], all_multiple_plots_summary_all_VE$forest[j], "= Multiple plot n°", j, "\n"))
+    cat(paste("Not all web coverages are available to do a Multliple plot for", all_multiple_plots_summary_all_VE$VAE[j], "~", all_multiple_plots_summary_all_VE$VE_short_name[j] , "in model", all_multiple_plots_summary_all_VE$model_type[j], all_multiple_plots_summary_all_VE$polar[j], all_multiple_plots_summary_all_VE$taxo[j], all_multiple_plots_summary_all_VE$forest[j], "= Multiple plot n?", j, "\n"))
     
   } else {  # If available, plot !
     
@@ -470,7 +473,7 @@ for (j in 1:nrow(all_multiple_plots_summary_all_VE)) {
     # Chose colors to associate with each model/web coverage
     col_list <- c("black", "dodgerblue3", "red") 
     
-    # Extract significativité of the slope from p-value of the single models stored in all_single_plots_summary_all_VE
+    # Extract significativit? of the slope from p-value of the single models stored in all_single_plots_summary_all_VE
     web_coverage_index <- NA
     for (i in 1:length(web_coverage_to_plot)) {
       web_coverage_index[i] <- which(web_coverage_to_plot[i] == web_coverage_list) # Retrieve index of plotted web coverages among all possible web coverages
@@ -662,11 +665,11 @@ for (j in 1:nrow(all_multiple_plots_summary_all_VE)) {
   }
   
   if (j %% 10 == 0) {
-    cat(paste("\n Plot n°", j, "on", nrow(all_multiple_plots_summary_all_VE), "-", Sys.time(), "\n"))
+    cat(paste("\n Plot n?", j, "on", nrow(all_multiple_plots_summary_all_VE), "-", Sys.time(), "\n"))
   }
   
   # if (k %% 10 == 0) {
-  #   cat(paste("\n Plot n°", k, "on", length(index_plot_to_plot), "-", Sys.time(), "\n"))
+  #   cat(paste("\n Plot n?", k, "on", length(index_plot_to_plot), "-", Sys.time(), "\n"))
   # }
   
   k <- k + 1 # Index to keep track when plotting a reduced number of plots

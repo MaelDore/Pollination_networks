@@ -1,14 +1,25 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+![GitHub](https://img.shields.io/badge/licence-MIT-green)
+[![DOI](https://zenodo.org/badge/277870034.svg)](https://zenodo.org/badge/latestdoi/277870034)
+
 ## Research Article
 
-This repository contains the code and data used to carry analyses for
-this research article:
+This repository contains the R scripts and data used to carry analyses
+for this research article:
 
 **Doré et al., 2020 - Relative effects of anthropogenic pressures,
 climate, and sampling design on the structure of pollination networks at
 the global scale.** [Link to be posted]()
+
+In this study, we conducted a synthetic analysis that assesses the
+relative impact of anthropogenic pressures, climatic variability, and
+sampling heterogeneity on the richness and levels of generalism in
+pollination networks. We analyzed an extensive dataset, comprising 295
+networks over 123 locations all over the world, and reporting over 50
+000 interactions between flowering plant species and their insect
+visitors.
 
 All content is available
 [here](https://github.com/MaelDore/Pollination_networks).
@@ -65,8 +76,8 @@ All content is available
   - [:file\_folder: **Tables**](Tables/) directory contains the tables
     displayed in the main text.
 
-**Note:** The raw interaction network data are available at [Link to be
-posted]()
+**Note:** The raw interaction network data are available in Zenodo at
+[Link to be posted]()
 
 ## How to run it
 
@@ -90,10 +101,29 @@ URL](/archive/master.zip). After unzipping:
     **Scripts/SM**](Scripts/SM/) sub-folder. It will rebuild the model
     outputs and figures presented in the Supplementaries of the article.
 
+## Contributions
+
+This project is licensed under the terms of the [**MIT
+license**](/LICENSE). Please contact the author if you wish to
+contribute, collaborate or use part of these scripts in your own
+research projects.
+
+**Maël DORÉ:** [:e-mail:](mailto:mael.dore@gmail.com)
+<mael.dore@gmail.com>
+
 ## How to cite
 
-Please cite this research article as:
+Please cite the original research article as:
 
 > Doré et al., 2020 - Relative effects of anthropogenic pressures,
 > climate, and sampling design on the structure of pollination networks
 > at the global scale.
+
+This repository is also archived in Zenodo. If you wish to cite the R
+scripts in conjunction with the original research article, please cite
+as:
+
+> Maël Doré. (2020). MaelDore/Pollination\_networks: R scripts for Doré
+> et al., 2020 - Relative effects of anthropogenic pressures, climate,
+> and sampling design on the structure of pollination networks at the
+> global scale. <http://doi.org/10.5281/zenodo.4290238>

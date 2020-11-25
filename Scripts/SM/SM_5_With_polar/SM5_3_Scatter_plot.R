@@ -1,4 +1,8 @@
 
+# Author: Maël DORÉ
+# Contact: mael.dore@gmail.com
+# License: MIT
+
 ##### Script SM5_3: Generate Figure S5.1 #####
 
 # Scatter plot highlighting polar networks as outliers
