@@ -126,4 +126,4 @@ as:
 > Maël Doré. (2020). MaelDore/Pollination\_networks: R scripts for Doré
 > et al., 2020 - Relative effects of anthropogenic pressures, climate,
 > and sampling design on the structure of pollination networks at the
-> global scale. <http://doi.org/10.5281/zenodo.4290238>
+> global scale. <http://doi.org/10.5281/zenodo.4290503>
