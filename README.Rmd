@@ -55,7 +55,7 @@ All content is available [here](https://github.com/MaelDore/Pollination_networks
     
   - [:file\_folder: **Tables**](Tables/) directory contains the tables displayed in the main text.
   
-__Note:__ The raw interaction network data are available in Zenodo at [Link to be posted]()  
+__Note:__ The raw interaction network data are available in Zenodo  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4300427.svg)](https://doi.org/10.5281/zenodo.4300427)
 
 ## How to run it
 
@@ -90,3 +90,6 @@ This repository is also archived in Zenodo. If you wish to cite the R scripts in
 
 > Maël Doré. (2020). MaelDore/Pollination_networks: R scripts for Doré et al., 2020 - Relative effects of anthropogenic pressures, climate, and sampling design on the structure of pollination networks at the global scale. http://doi.org/10.5281/zenodo.4290503
 
+If you use the raw interaction database, please cite:
+
+> Elisa Thébault, Maël Doré & Colin Fontaine. (2020). A database of plant-pollinator networks (Version 1) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.4300427

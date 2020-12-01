@@ -76,8 +76,8 @@ All content is available
   - [:file\_folder: **Tables**](Tables/) directory contains the tables
     displayed in the main text.
 
-**Note:** The raw interaction network data are available in Zenodo at
-[Link to be posted]()
+**Note:** The raw interaction network data are available in Zenodo
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4300427.svg)](https://doi.org/10.5281/zenodo.4300427)
 
 ## How to run it
 
@@ -127,3 +127,9 @@ as:
 > et al., 2020 - Relative effects of anthropogenic pressures, climate,
 > and sampling design on the structure of pollination networks at the
 > global scale. <http://doi.org/10.5281/zenodo.4290503>
+
+If you use the raw interaction database, please cite:
+
+> Elisa Thébault, Maël Doré & Colin Fontaine. (2020). A database of
+> plant-pollinator networks (Version 1) \[Data set\]. Zenodo.
+> <http://doi.org/10.5281/zenodo.4300427>
